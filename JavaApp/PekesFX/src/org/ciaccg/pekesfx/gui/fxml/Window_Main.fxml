@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="500.0" minWidth="700.0" prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="10.0" layoutY="10.0" prefHeight="467.0" prefWidth="446.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane maxHeight="50.0" maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="769.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="57.0" fitWidth="100.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="757.0" AnchorPane.topAnchor="10.0">
+                     <image>
+                        <Image url="@../img/Pekes_Logo.png" />
+                     </image>
+                  </ImageView>
+                  <GridPane alignment="CENTER" layoutX="125.0" layoutY="10.0" opacity="0.9" prefHeight="70.0" prefWidth="742.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" percentWidth="11.0" prefWidth="79.5" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="102.5" minWidth="10.0" percentWidth="11.0" prefWidth="76.5" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="102.0" minWidth="10.0" percentWidth="11.0" prefWidth="77.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="110.0" minWidth="10.0" percentWidth="11.0" prefWidth="61.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" percentWidth="11.0" prefWidth="86.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="157.0" minWidth="0.0" percentWidth="15.0" prefWidth="103.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.0" minWidth="10.0" percentWidth="15.0" prefWidth="83.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="171.0" minWidth="10.0" percentWidth="15.0" prefWidth="142.5" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="30.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <JFXButton fx:id="btnCargarModuloCalzado" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="50.0" minWidth="60.0" prefHeight="67.0" prefWidth="91.0" ripplerFill="#fc0000" text="Calzado">
+                           <graphic>
+                              <ImageView fitHeight="18.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@glyphicons-1-glass.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="btnCargarModuloEstilos" buttonType="RAISED" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="50.0" minWidth="60.0" prefHeight="52.0" prefWidth="85.0" ripplerFill="#fc0000" text="Estilos" GridPane.columnIndex="1">
+                           <graphic>
+                              <ImageView fitHeight="18.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@glyphicons-1-glass.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="btnCargarModuloVentas" buttonType="RAISED" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="50.0" minWidth="60.0" prefHeight="51.0" prefWidth="85.0" ripplerFill="#fc0000" style="-fx-background-image: ; -fx-background-color: #f1f1f1;" text="Ventas" GridPane.columnIndex="2">
+                           <graphic>
+                              <ImageView fitHeight="18.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@glyphicons-1-glass.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="btnCargarModuloGalería" buttonType="RAISED" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="50.0" minWidth="50.0" prefHeight="51.0" prefWidth="85.0" ripplerFill="#fc0000" text="Galería" GridPane.columnIndex="3">
+                           <graphic>
+                              <ImageView fitHeight="18.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/Galería.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="btnCargarModuloClientes" buttonType="RAISED" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="50.0" minWidth="50.0" prefHeight="51.0" prefWidth="85.0" ripplerFill="#fc0000" text="Clientes" GridPane.columnIndex="4">
+                           <graphic>
+                              <ImageView fitHeight="18.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@glyphicons-1-glass.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="btnCargarModuloEmpleado" buttonType="RAISED" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="50.0" minWidth="85.0" prefHeight="51.0" prefWidth="100.0" ripplerFill="#40aaed" text="Empleados" GridPane.columnIndex="5">
+                           <graphic>
+                              <ImageView fitHeight="18.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@glyphicons-1-glass.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="btnCerrarSesion" buttonType="RAISED" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="50.0" minWidth="85.0" prefHeight="51.0" prefWidth="100.0" ripplerFill="#40aaed" text="Cerrar Sesión" GridPane.columnIndex="6">
+                           <graphic>
+                              <ImageView fitHeight="18.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/Login.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <BorderPane fx:id="pnlContenedorPrincipal" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="431.0" prefWidth="867.0" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

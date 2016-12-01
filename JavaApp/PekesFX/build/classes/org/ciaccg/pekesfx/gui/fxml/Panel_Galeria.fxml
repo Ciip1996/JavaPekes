@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+       <SplitPane dividerPositions="0.4340974212034384" layoutX="10.0" layoutY="45.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="355.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0">
+            <items>
+               <AnchorPane minHeight="300.0" minWidth="300.0" prefHeight="368.0" prefWidth="529.0">
+                  <children>
+                     <ScrollPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="398.0" prefWidth="494.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <content>
+                           <TableView fx:id="tblGaleria" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="1193.0">
+                              <columns>
+                                 <TableColumn prefWidth="75.0" text="C1" />
+                                 <TableColumn prefWidth="75.0" text="C2" />
+                              </columns>
+                           </TableView>
+                        </content>
+                     </ScrollPane>
+                  </children>
+               </AnchorPane>
+               <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="350.0" minWidth="250.0" prefHeight="500.0" prefWidth="400.0">
+                  <children>
+                     <GridPane alignment="TOP_CENTER" layoutX="2.0" layoutY="47.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="350.0" minWidth="250.0" prefHeight="500.0" prefWidth="400.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="10.0">
+                        <columnConstraints>
+                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <children>
+                           <Label text="Datos de la Fotografía:" />
+                           <TextField fx:id="txtCodigo" maxHeight="-Infinity" prefHeight="25.0" prefWidth="176.0" promptText="Código" GridPane.rowIndex="2">
+                              <GridPane.margin>
+                                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                              </GridPane.margin>
+                           </TextField>
+                           <TextField fx:id="txtDescripcion" maxHeight="-Infinity" prefHeight="30.0" prefWidth="159.0" promptText="Descripción" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                              <GridPane.margin>
+                                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                              </GridPane.margin>
+                           </TextField>
+                           <ComboBox fx:id="cmbEstatus" maxHeight="-Infinity" prefHeight="25.0" prefWidth="183.0" promptText="Estado" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                              <items>
+                                 <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="1" />
+                                    <String fx:value="0" />
+                                  
+                                 </FXCollections>
+                              </items>
+                              <GridPane.margin>
+                                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                              </GridPane.margin>
+                           </ComboBox>
+                        <ImageView fx:id="imgvFotografia" fitHeight="150.0" fitWidth="192.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5" />
+                        <Button fx:id="btnInsertarGaleria" mnemonicParsing="false" prefHeight="25.0" prefWidth="188.0" text="Insertar" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Button fx:id="btnModificarGaleria" mnemonicParsing="false" prefHeight="25.0" prefWidth="187.0" text="Modificar" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Button fx:id="btnSeleccionarFoto" mnemonicParsing="false" prefHeight="25.0" prefWidth="191.0" text="Seleccionar Foto" GridPane.rowIndex="8" />
+                        <Button fx:id="btnRefrescarTabla" mnemonicParsing="false" prefHeight="25.0" prefWidth="189.0" text="Refrescar" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <TextField fx:id="txtIdGaleria" editable="false" prefHeight="25.0" prefWidth="144.0" promptText="Identificador" GridPane.rowIndex="1" />
+                        </children>
+                     </GridPane>
+                  </children>
+               </AnchorPane>
+            </items>
+         </SplitPane>
+   </children>
+</AnchorPane>

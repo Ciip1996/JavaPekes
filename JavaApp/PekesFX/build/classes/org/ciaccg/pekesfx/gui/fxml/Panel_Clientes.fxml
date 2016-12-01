@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <SplitPane dividerPositions="0.4340974212034384" layoutX="10.0" layoutY="45.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="355.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0">
+         <items>
+            <AnchorPane minHeight="300.0" minWidth="300.0" prefHeight="368.0" prefWidth="529.0">
+               <children>
+                  <TableView fx:id="tblClientes" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="1193.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columns>
+                        <TableColumn prefWidth="75.0" text="C1" />
+                        <TableColumn prefWidth="75.0" text="C2" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="350.0" minWidth="250.0" prefHeight="500.0" prefWidth="400.0">
+               <children>
+                  <GridPane alignment="TOP_CENTER" layoutX="2.0" layoutY="47.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="350.0" minWidth="250.0" prefHeight="500.0" prefWidth="400.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="10.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Datos Personales:" />
+                        <TextField fx:id="txtNombre" maxHeight="-Infinity" prefHeight="30.0" prefWidth="159.0" promptText="Nombre" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="txtApellidoPaterno" maxHeight="-Infinity" prefHeight="30.0" prefWidth="159.0" promptText="Apellido Paterno" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="txtApellidoMaterno" maxHeight="-Infinity" prefHeight="30.0" prefWidth="159.0" promptText="Apellido Materno" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <DatePicker fx:id="dtFechaNacimiento" maxHeight="-Infinity" prefHeight="30.0" prefWidth="166.0" promptText="dia/mes/año" GridPane.columnIndex="1" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </DatePicker>
+                        <TextField fx:id="txtEmail" maxHeight="-Infinity" prefHeight="30.0" prefWidth="127.0" promptText="Email" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="txtTelefonoMovil" maxHeight="-Infinity" prefHeight="30.0" prefWidth="166.0" promptText="Telefono Movil" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="txtCiudad" maxHeight="-Infinity" prefHeight="30.0" prefWidth="159.0" promptText="Ciudad" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="txtEstado" maxHeight="-Infinity" prefHeight="30.0" prefWidth="166.0" promptText="Estado" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="txtCurp" maxHeight="-Infinity" prefHeight="30.0" prefWidth="166.0" promptText="Curp" GridPane.rowIndex="5">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="txtRfc" maxHeight="-Infinity" prefHeight="30.0" prefWidth="159.0" promptText="Rfc" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="txtDomicilio" maxHeight="-Infinity" prefHeight="30.0" prefWidth="232.0" promptText="Domicilio" GridPane.rowIndex="6">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="txtCodigoPostal" maxHeight="-Infinity" prefHeight="30.0" prefWidth="89.0" promptText="Codigo Postal" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <Label text="No Cliente: " GridPane.rowIndex="8">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <TextField fx:id="txtFolio" maxHeight="-Infinity" prefHeight="30.0" prefWidth="141.0" promptText="Folio" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="txtNombreContacto" maxHeight="-Infinity" prefHeight="30.0" prefWidth="141.0" promptText="Nombre de Contacto" GridPane.rowIndex="9">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <ComboBox fx:id="cboCategoria" maxHeight="-Infinity" prefHeight="30.0" prefWidth="150.0" promptText="Categoría" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                           <items>
+                              <FXCollections fx:factory="observableArrayList">
+                                 <String fx:value="nuevo" />
+                                 <String fx:value="estandar" />
+                                 <String fx:value="moroso" />
+                                 <String fx:value="distinguido" />
+                              </FXCollections>
+                           </items>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </ComboBox>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <ButtonBar layoutY="1.0" prefHeight="40.0" prefWidth="320.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
+         <buttons>
+            <CheckBox mnemonicParsing="false" text="Mostrar Eliminados" />
+            <Button fx:id="btnFiltrar" mnemonicParsing="false" text="Filtrar Borrados" />
+            <Button fx:id="btnCrearCliente" mnemonicParsing="false" prefHeight="25.0" prefWidth="106.0" text="Crear Cliente" />
+            <Button fx:id="btnActualizarCliente" mnemonicParsing="false" prefHeight="25.0" prefWidth="106.0" text="Modificar Cliente" />
+            <Button fx:id="btnRefrescarTabla" mnemonicParsing="false" prefHeight="25.0" prefWidth="106.0" text="Refrescar" />
+            <Button fx:id="btnBajaLogica" mnemonicParsing="false" prefHeight="25.0" prefWidth="106.0" text="Dar Baja" />
+         </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>

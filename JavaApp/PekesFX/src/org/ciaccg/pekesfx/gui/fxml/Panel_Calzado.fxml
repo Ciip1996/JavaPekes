@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="563.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox fx:id="Vbox1" prefHeight="238.0" prefWidth="399.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <stylesheets>
+            <URL value="@ComplexApplication.css" />
+         </stylesheets>
+         <children>
+            <MenuBar stylesheets="@css/PanelCalzado.css">
+               <menus>
+                  <Menu mnemonicParsing="false" text="File">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Open…" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <Menu mnemonicParsing="false" text="Open Recent" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Edit" />
+                  <Menu mnemonicParsing="false" text="Help">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <SplitPane dividerPositions="0.24164810690423164, 0.5" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+               <items>
+                  <AnchorPane id="IdMaster" fx:id="fxIdMaster1" maxWidth="200.0" minWidth="150.0" prefWidth="180.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Categorías" textAlignment="CENTER" wrapText="false" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+                           <font>
+                              <Font size="18.0" fx:id="x11" />
+                           </font>
+                           <textFill>
+                              <Color blue="0.624" green="0.624" red="0.624" fx:id="x21" />
+                           </textFill>
+                        </Label>
+                        <ListView fx:id="lstCategorias" layoutX="4.0" layoutY="41.0" prefHeight="180.0" prefWidth="130.0" AnchorPane.bottomAnchor="284.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane id="Content" maxHeight="1.7976931348623157E308" maxWidth="1000.0" minHeight="-1.0" minWidth="400.0" prefHeight="545.0" prefWidth="600.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" style="&#10;" text="Inventario de Calzado" textAlignment="CENTER" wrapText="false" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+                           <font>
+                              <Font size="18.0" fx:id="x111" />
+                           </font>
+                           <textFill>
+                              <Color blue="0.624" green="0.624" red="0.624" fx:id="x211" />
+                           </textFill>
+                        </Label>
+                        <TableView fx:id="tblCalzado" layoutX="1.0" layoutY="51.0" prefHeight="444.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="C1" />
+                              <TableColumn prefWidth="75.0" text="C2" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="335.0" minWidth="250.0" prefWidth="350.0">
+                     <children>
+                        <Label alignment="CENTER" font="$x11" layoutX="14.0" layoutY="14.0" style="&#10;" text="Detalles de Calzado" textAlignment="CENTER" textFill="$x21" wrapText="false" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+                        <GridPane alignment="TOP_CENTER" layoutX="7.0" layoutY="41.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="139.0" minWidth="230.0" prefHeight="233.0" prefWidth="355.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="0.0" minWidth="10.0" percentWidth="20.0" prefWidth="112.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="0.0" minWidth="10.0" percentWidth="40.0" prefWidth="120.5" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="110.0" percentWidth="40.0" prefWidth="120.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="78.0" minHeight="10.0" percentHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="72.0" minHeight="10.0" percentHeight="10.0" prefHeight="72.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="200.5" minHeight="0.5" percentHeight="40.0" prefHeight="198.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="247.5" minHeight="10.0" percentHeight="20.0" prefHeight="91.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <ComboBox fx:id="cboMarca" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="25.0" minWidth="149.0" prefHeight="25.0" prefWidth="149.0" promptText="Seleccione la Marca" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                 <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                       <String fx:value="nuevo" />
+                                       <String fx:value="estandar" />
+                                       <String fx:value="moroso" />
+                                       <String fx:value="distinguido" />
+                                    </FXCollections>
+                                 </items>
+                                 <GridPane.margin>
+                                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                 </GridPane.margin>
+                              </ComboBox>
+                              <Button fx:id="btnSeleccionarFoto" maxHeight="1.7976931348623157E308" maxWidth="150.0" minHeight="25.0" minWidth="80.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="146.0" text="Seleccionar Foto" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                 </GridPane.margin>
+                              </Button>
+                              <TextField fx:id="txtRutaFoto" disable="true" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" text="No hay Foto Seleccionada" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextArea fx:id="textArea" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="5">
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </GridPane.margin>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </TextArea>
+                              <TextField fx:id="txtCodigoProducto" disable="true" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" text="Codigo de Producto" GridPane.columnIndex="1" GridPane.columnSpan="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <Label text="Código:" GridPane.halignment="RIGHT" />
+                              <Label text="Marca:" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+                              <ImageView fx:id="img" fitHeight="180.0" fitWidth="188.0" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+            <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+               <children>
+                  <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="Left status" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="11.0" fx:id="x31" />
+                     </font>
+                     <textFill>
+                        <Color blue="0.625" green="0.625" red="0.625" fx:id="x41" />
+                     </textFill>
+                  </Label>
+                  <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+                  <Label font="$x31" maxWidth="-1.0" text="Right status" textFill="$x41" HBox.hgrow="NEVER" />
+               </children>
+               <padding>
+                  <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
