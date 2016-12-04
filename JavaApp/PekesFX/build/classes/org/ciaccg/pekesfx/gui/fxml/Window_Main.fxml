@@ -65,7 +65,7 @@
                               </ImageView>
                            </graphic>
                         </JFXButton>
-                        <JFXButton fx:id="btnCargarModuloGaleria" buttonType="RAISED" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="50.0" minWidth="50.0" prefHeight="51.0" prefWidth="85.0" ripplerFill="#fc0000" text="Galería" GridPane.columnIndex="3">
+                        <JFXButton fx:id="btnCargarModuloGalería" buttonType="RAISED" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="50.0" minWidth="50.0" prefHeight="51.0" prefWidth="85.0" ripplerFill="#fc0000" text="Galería" GridPane.columnIndex="3">
                            <graphic>
                               <ImageView fitHeight="18.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -74,7 +74,7 @@
                               </ImageView>
                            </graphic>
                         </JFXButton>
-                        <JFXButton fx:id="btnCargarModuloCliente" buttonType="RAISED" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="50.0" minWidth="50.0" prefHeight="51.0" prefWidth="85.0" ripplerFill="#fc0000" text="Clientes" GridPane.columnIndex="4">
+                        <JFXButton fx:id="btnCargarModuloClientes" buttonType="RAISED" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="50.0" minWidth="50.0" prefHeight="51.0" prefWidth="85.0" ripplerFill="#fc0000" text="Clientes" GridPane.columnIndex="4">
                            <graphic>
                               <ImageView fitHeight="18.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
