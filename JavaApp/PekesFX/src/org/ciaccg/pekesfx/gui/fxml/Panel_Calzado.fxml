@@ -8,10 +8,6 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -21,8 +17,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
@@ -35,23 +29,6 @@
             <URL value="@ComplexApplication.css" />
          </stylesheets>
          <children>
-            <MenuBar stylesheets="@css/PanelCalzado.css">
-               <menus>
-                  <Menu mnemonicParsing="false" text="File">
-                     <items>
-                        <MenuItem mnemonicParsing="false" text="Open…" />
-                        <SeparatorMenuItem mnemonicParsing="false" />
-                        <Menu mnemonicParsing="false" text="Open Recent" />
-                     </items>
-                  </Menu>
-                  <Menu mnemonicParsing="false" text="Edit" />
-                  <Menu mnemonicParsing="false" text="Help">
-                     <items>
-                        <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
-                     </items>
-                  </Menu>
-               </menus>
-            </MenuBar>
             <SplitPane dividerPositions="0.24164810690423164, 0.5" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
                <items>
                   <AnchorPane id="IdMaster" fx:id="fxIdMaster1" maxWidth="200.0" minWidth="150.0" prefWidth="180.0">
@@ -151,23 +128,6 @@
                   </AnchorPane>
                </items>
             </SplitPane>
-            <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
-               <children>
-                  <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="Left status" HBox.hgrow="ALWAYS">
-                     <font>
-                        <Font size="11.0" fx:id="x31" />
-                     </font>
-                     <textFill>
-                        <Color blue="0.625" green="0.625" red="0.625" fx:id="x41" />
-                     </textFill>
-                  </Label>
-                  <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
-                  <Label font="$x31" maxWidth="-1.0" text="Right status" textFill="$x41" HBox.hgrow="NEVER" />
-               </children>
-               <padding>
-                  <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
-               </padding>
-            </HBox>
          </children>
       </VBox>
    </children>

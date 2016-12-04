@@ -44,7 +44,7 @@ public class ConexionSQLServer
         password = "123";
         host = "localhost";
         puerto = 1433;
-        nombreBD = "pekesBD";
+        nombreBD = "PekesBD";
         url = "jdbc:sqlserver://"+host+":"+puerto+";databaseName="+nombreBD;
         conn = DriverManager.getConnection(url,userName,password);
         return conn;
