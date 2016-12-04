@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="PekesFX.jar" size="572121" download="eager" />
+    <jar href="PekesFX.jar" size="144274" download="eager" />
     <jar href="lib\bridj-0.6.2.jar" size="878674" download="eager" />
     <jar href="lib\commons-beanutils-1.9.3.jar" size="246174" download="eager" />
     <jar href="lib\commons-collections-3.2.2.jar" size="588337" download="eager" />

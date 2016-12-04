@@ -52,7 +52,8 @@ public class WindowMain extends Application
             inicializar();
             agregarListeners();
             stage.setMinWidth(850);        
-            stage.setMinHeight(500);            
+            stage.setMinHeight(500);      
+            cargarModuloLogin();
             stage.setScene(scene);
             stage.show();
         } 
@@ -76,10 +77,10 @@ public class WindowMain extends Application
         pnlEstilos.inicializar();
         pnlLogin = new LoginWindow(this);
         pnlLogin.inicializar();
-//        pnlGaleria = new PanelGaleria(this);
-//        pnlGaleria.inicializar();
-//        pnlVentas = new PanelVentas(this);
-//        pnlVentas.inicializar();
+        pnlGaleria = new PanelGaleria(this);
+        pnlGaleria.inicializar();
+        pnlVentas = new PanelVentas(this);
+        pnlVentas.inicializar();
         
         //cargarModuloLogin();
         }catch(Exception e){
@@ -99,13 +100,13 @@ public class WindowMain extends Application
             pnlContenedorPrincipal.setCenter(pnlEstilos.getRootPane());
         });
         btnCargarModuloGalería.setOnAction(evt -> {
-//            pnlContenedorPrincipal.setCenter(pnlGaleria.getRootPane());
+            pnlContenedorPrincipal.setCenter(pnlGaleria.getRootPane());
         });
          btnCargarModuloVentas.setOnAction(evt -> {
-//            pnlContenedorPrincipal.setCenter(pnlVentas.getRootPane());
+            pnlContenedorPrincipal.setCenter(pnlVentas.getRootPane());
         });
     }
     private void cargarModuloLogin(){
-       // pnlContenedorPrincipal.setCenter(pnlLogin.getRootPane());
+        pnlContenedorPrincipal.setCenter(pnlLogin.getRootPane());
     }
 }
