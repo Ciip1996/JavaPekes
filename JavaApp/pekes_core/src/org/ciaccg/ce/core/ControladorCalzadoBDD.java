@@ -12,8 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.ciaccg.ce.db.ConexionSQLServer;
 import org.ciaccg.ce.model.Calzado;
-import org.ciaccg.ce.model.Fotografía;
-
+import org.ciaccg.ce.model.Galeria;
 
 /**
  *
@@ -35,13 +34,8 @@ public class ControladorCalzadoBDD {
         pstmt.setString(1, ca.getCodigo());
         pstmt.setString(2, ca.getEspecificaciones());
         pstmt.setString(3, ca.getMarca());
-        pstmt.setString(4, ca.getPreciosXml());
         pstmt.setInt(5, ca.getEstatus());
-        
-       /* pstmt.setInt(6,ca.getFoto().getIdentificador());
-        pstmt.setString(7,ca.getFoto().getCodigo());
-        pstmt.setString(8,ca.getFoto().getFoto());
-        pstmt.setString(9,ca.getFoto().getDescripcion());*/
+        pstmt.setInt(5, ca.getEstatus());
         
         pstmt.executeUpdate();
         pstmt.close();
@@ -54,25 +48,21 @@ public class ControladorCalzadoBDD {
      */
     public void update(Calzado ca) throws Exception
     {
-        String query = "EXEC dbo.pa_java_ActualizarCalzado ?,?,?,?,?,?,?,?";
-        ConexionSQLServer connSqlServer = new ConexionSQLServer();
-        Connection conn = connSqlServer.abrir();
-        PreparedStatement pstmt = conn.prepareStatement(query);
-        
-        //LLENAMOS LOS PARAMETROS DE LA CONSULTA:
-        pstmt.setString(1, ca.getCodigo());
-        pstmt.setString(2, ca.getEspecificaciones());
-        pstmt.setString(3, ca.getMarca());
-        pstmt.setString(4, ca.getPreciosXml());
-        pstmt.setInt(5, ca.getEstatus());
-        //pstmt.setInt(6,ca.getFotografia().getIdentificador());
-       /* pstmt.setString(6,ca.getFotografia().getCodigo());
-        pstmt.setString(7,ca.getFotografia().getFoto());
-        pstmt.setString(8,ca.getFotografia().getDescripcion());
-*/
-        pstmt.executeUpdate();
-        pstmt.close();
-        connSqlServer.cerrar();
+//        String query = "EXEC dbo.pa_java_ActualizarCalzado ?,?,?,?,?,?,?,?";
+//        ConexionSQLServer connSqlServer = new ConexionSQLServer();
+//        Connection conn = connSqlServer.abrir();
+//        PreparedStatement pstmt = conn.prepareStatement(query);
+//        
+//        //LLENAMOS LOS PARAMETROS DE LA CONSULTA:
+//        pstmt.setString(1, ca.getCodigo());
+//        pstmt.setString(2, ca.getEspecificaciones());
+//        pstmt.setString(3, ca.getMarca());
+//        pstmt.setInt(4, ca.getEstatus());
+//        pstmt.setInt(6,ca.getFoto());
+//
+//        pstmt.executeUpdate();
+//        pstmt.close();
+//        connSqlServer.cerrar();
     }
     /**
      * Actualiza a un estatus de 0 a un cliente por su ID
@@ -86,7 +76,6 @@ public class ControladorCalzadoBDD {
         ConexionSQLServer connSQLServer = new ConexionSQLServer();
         Connection conn = connSQLServer.abrir();
         PreparedStatement pstmt = conn.prepareStatement(query);
-       
         pstmt.setInt(1,ca.getIdentificador());
         pstmt.executeUpdate();
         pstmt.close();
@@ -101,7 +90,7 @@ public class ControladorCalzadoBDD {
     public Calzado findById(Calzado ca) throws Exception
     {
         //definimos consulta a ejecutar
-        String query = "EXEC dbo.pa_ConsultaCalzado ?";        
+        String query = "EXEC dbo.pa_java_ConsultaCalzadoPorID";        
         //Generamos un objeto de conexion y nos conectamos con la BD en SQL Server
         ConexionSQLServer connSQLServer = new ConexionSQLServer();
         Connection conn = connSQLServer.abrir();
@@ -119,11 +108,10 @@ public class ControladorCalzadoBDD {
         calzado.setEspecificaciones(rs.getString("Especificaciones"));
         calzado.setMarca(rs.getString("Marca"));
         calzado.setEstatus(rs.getInt("fk_IdFoto"));
-        calzado.setPreciosXml(rs.getString("PreciosXML"));
         calzado.setEstatus(rs.getInt("Estaus"));
 
-        Fotografía foto = new Fotografía();        
-        foto.setIdentificador(rs.getInt("pk_IdGaleria"));
+        Galeria foto = new Galeria();        
+        foto.setIdGaleria(rs.getInt("pk_IdGaleria"));
         foto.setCodigo(rs.getString("Codigo"));
         foto.setFoto(rs.getString("Foto"));
         foto.setDescripcion(rs.getString("Descripcion"));
@@ -140,17 +128,15 @@ public class ControladorCalzadoBDD {
      * @return List<Cliente>
      * @throws Exception 
      */
-    public List<Calzado> getAll(String query) throws Exception
+    public List<Calzado> getAll() throws Exception
     {
         Calzado calzado;
         List<Calzado> lstCalzado = new ArrayList<>();
-        //definimos consulta a ejecutar
-        //String query = "SELECT * FROM V_Cliente";        
-        //Generamos un objeto de conexion y nos conectamos con la BD en SQL Server
         ConexionSQLServer connSQLServer = new ConexionSQLServer();
         Connection conn = connSQLServer.abrir();
         
         //Generamos un objeto PreparedStatement para ejecutar la consulta
+        String query = "EXEC dbo.pa_java_ConsultaCalzado";
         PreparedStatement pstmt = conn.prepareStatement(query);
         
         //Ejecutamos la consulta y guardamos el resultado
@@ -160,22 +146,14 @@ public class ControladorCalzadoBDD {
         while(rs.next())
         {
             calzado = new Calzado();
-             //Nos movemos al primer registro devuelto        
+             //Nos movemos al primer registro devuelto      
+            calzado.setIdentificador(rs.getInt("pk_IdCalzado"));
             calzado.setCodigo(rs.getString("Codigo"));
             calzado.setEspecificaciones(rs.getString("Especificaciones"));
             calzado.setMarca(rs.getString("Marca"));
             calzado.setEstatus(rs.getInt("fk_IdFoto"));
-            calzado.setPreciosXml(rs.getString("PreciosXML"));
-            calzado.setEstatus(rs.getInt("Estaus"));
-            Fotografía foto = new Fotografía();        
-            foto.setIdentificador(rs.getInt("pk_IdGaleria"));
-            foto.setCodigo(rs.getString("Codigo"));
-            foto.setFoto(rs.getString("Foto"));
-            foto.setDescripcion(rs.getString("Descripcion"));
-       //     calzado.setFotografia(foto);
-            
+            calzado.setEstatus(rs.getInt("Estatus"));
             lstCalzado.add(calzado);
-            
         }
         //Cerramos los objetos de conexion con la BD
         rs.close();

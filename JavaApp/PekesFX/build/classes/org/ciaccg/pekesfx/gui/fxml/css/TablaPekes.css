@@ -1,0 +1,64 @@
+﻿.table-view{
+   -fx-background-color: transparent;
+}
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+
+/* Spaltenk�pfe
+    Struktur column-header-background -> column-header */
+
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(#918300 90%, #F7F7F7 10%);/*#167F92 90%, #FFFFFF 10%);*/
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+/*Cabecera*/
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+/*Celdas*/
+.table-view .table-cell{
+    -fx-text-fill:#024457; /*#cfebf5;*/
+}
+/*Celda Impar*/
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color,rgba(222,202,22,0.3)/*rgba(22,127,146,0.3); /*#204347*/;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+/*Celda Impar*/
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color,#F7F7F7;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:selected {
+    -fx-background-color:#e8507c; /*#DECA16;*/
+    -fx-text-fill: #FFFFFF;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+.table-row-cell:selected .text{
+    -fx-fill: #ffffff;
+
+}
+.table-view > .virtual-flow > .scroll-bar:vertical,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track-background, 
+.table-view > .virtual-flow > .scroll-bar:horizontal,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+    -fx-background-color: transparent;
+}
+
+
+
+.table-view > .virtual-flow > .scroll-bar > .increment-button, 
+.table-view > .virtual-flow > .scroll-bar > .decrement-button {
+    -fx-opacity: 0;
+}

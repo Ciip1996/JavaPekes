@@ -14,8 +14,7 @@ public class Calzado {
     private String codigo;
     private String marca;
     private String especificaciones;
-    private String foto;
-    private String preciosXML;
+    private int foto;
     private int estatus;
 
     public int getIdentificador() {
@@ -50,22 +49,13 @@ public class Calzado {
         this.especificaciones = especificaciones;
     }
 
-    public String getFoto() {
+    public int getFoto() {
         return foto;
     }
 
-    public void setFoto(String foto) {
+    public void setFoto(int foto) {
         this.foto = foto;
     }
-
-    public String getPreciosXml() {
-        return preciosXML;
-    }
-
-    public void setPreciosXml(String preciosXML) {
-        this.preciosXML = preciosXML;
-    }
-
     public int getEstatus() {
         return estatus;
     }
@@ -73,5 +63,5 @@ public class Calzado {
     public void setEstatus(int estatus) {
         this.estatus = estatus;
     }
-   
+
 }

@@ -1,0 +1,18 @@
+.button:focused{
+    -fx-background-color: linear-gradient(#ffffff, #ffffff);
+}
+.button:hover {
+    -fx-background-color: linear-gradient(#e8507c, #e8507c) !important;
+    -fx-text-fill: #ffffff;
+}
+.button:pressed{
+     -fx-background-color: linear-gradient(#e8507c, #ffffff) !important;
+}
+.button {
+    -fx-text-fill: #e8507c;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#ffffff, #ffffff);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.3) , 5, 0.0 , 0 , 1 );
+}
+

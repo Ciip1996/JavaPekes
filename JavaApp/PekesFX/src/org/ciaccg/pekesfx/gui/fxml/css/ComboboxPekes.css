@@ -1,0 +1,76 @@
+﻿.combo-box .list-cell 
+{
+    -fx-background: orange;
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-text-base-color;
+    -fx-padding: 3 0 2 7;
+    -fx-cell-size: 10px; 
+}
+.combo-box-popup .list-view 
+{
+    -fx-background-color: white;
+    -fx-background-insets: 0, 1;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 8, 0.0 , 0 , 0 );
+}    
+
+.combo-box-popup .list-view .list-cell 
+{
+/*La lista blanca con elementos que se despliega*/
+    -fx-padding: 4 0 4 5;
+    -fx-background-color: white;
+    -fx-text-fill:#7e8cb3;
+}
+
+.combo-box-popup .list-view .list-cell:filled:selected, .combo-box-popup .list-view .list-cell:filled:selected:hover 
+{
+/*Seleccion del cbo al dar clic*/
+    -fx-background: -fx-accent;
+    -fx-background-color: #e8507c;/* -fx-selection-bar;*/
+    -fx-text-fill: -fx-selection-bar-text;
+}
+
+.combo-box-popup .list-view .list-cell:filled:hover 
+{
+    -fx-background-color: white;
+    -fx-text-fill: #0a5258;
+}
+
+.combo-box-base  
+{
+    -fx-background-color: white;
+    -fx-background-radius: 5, 5, 4, 3;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-padding: 0;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.3) , 5, 0.0 , 0 , 1 );
+    
+}
+.combo-box-base:hover
+{
+    -fx-color: -fx-hover-base;
+}
+.combo-box-base:showing 
+{/*Cuando se da clic sobre el cbo la parte de arriba*/
+    -fx-color: -fx-pressed-base;
+}
+.combo-box-base:focused {
+	/*cuando el combobox esta seleccionado*/
+    -fx-background-color: #e8507c,-fx-outer-border, -fx-inner-border, white;
+    -fx-background-radius: 6.4, 4, 5, 3;
+    -fx-background-insets: -1.4, 0, 1, 2;
+}
+.combo-box:focused{
+    -fx-background-color: linear-gradient(#ffffff, #ffffff);
+}
+.combo-box:hover {
+    -fx-background-color: linear-gradient(#ffffff,#d9f7f5) !important;
+}
+.combo-box:pressed{
+     -fx-background-color: linear-gradient(#d9f7f5 , #ffffff) !important;
+}
+.combo-box {
+    -fx-text-fill: #e8507c;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#ffffff, #ffffff);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.3) , 5, 0.0 , 0 , 1 );
+}

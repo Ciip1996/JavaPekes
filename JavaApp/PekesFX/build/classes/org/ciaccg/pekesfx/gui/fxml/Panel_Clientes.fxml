@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.String?>
+<?import java.net.URL?>
 <?import javafx.collections.FXCollections?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
@@ -19,7 +20,13 @@
 <?import javafx.scene.layout.RowConstraints?>
 
 <AnchorPane id="AnchorPane" fx:id="rootPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
+    <stylesheets>
+      <URL value="@css/TablaPekes.css" />
+      <URL value="@css/BotonPekes.css" />
+      <URL value="@css/ComboboxPekes.css" />
+      <URL value="@css/PanelCalzado.css" />
+    </stylesheets>    
+    <children>
       <SplitPane dividerPositions="0.4340974212034384" layoutX="10.0" layoutY="45.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="355.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0">
          <items>
             <AnchorPane minHeight="300.0" minWidth="300.0" prefHeight="368.0" prefWidth="529.0">
@@ -32,7 +39,7 @@
                   </TableView>
                </children>
             </AnchorPane>
-            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="350.0" minWidth="250.0" prefHeight="500.0" prefWidth="400.0">
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="350.0" minWidth="250.0" prefHeight="500.0" prefWidth="400.0" styleClass="PanelCalzado">
                <children>
                   <GridPane alignment="TOP_CENTER" layoutX="2.0" layoutY="47.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="350.0" minWidth="250.0" prefHeight="500.0" prefWidth="400.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="10.0">
                      <columnConstraints>

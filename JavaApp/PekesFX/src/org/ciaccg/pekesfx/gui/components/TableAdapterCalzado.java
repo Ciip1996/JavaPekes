@@ -19,7 +19,7 @@ import org.ciaccg.ce.model.Calzado;
  */
 public class TableAdapterCalzado {
     TableView tabla;
-    TableColumn colIdCalzado; //IdPersona
+    TableColumn colIdCalzado; 
     TableColumn colCodigo;
     TableColumn colEspecificaciones;
     TableColumn colEstatus;
